@@ -1,6 +1,13 @@
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 
+import 'AlertDialog.dart' show AlertDialogPage;
+import 'Navigasi_Multi_Halaman.dart' show NavigasiMultiHalamanPage;
+import 'Spacer_ElevatedButton_SnackBar.dart'
+    show SpacerElevatedButtonSnackBarPage;
+import 'expanded.dart' show ExpandedPage;
+import 'tugas_kelompok.dart' show TugasKelompokPage;
+
 const _primary = Color(0xFF0984E3);
 const _primaryDark = Color(0xFF0767B5);
 const _secondary = Color(0xFF74B9FF);
@@ -38,7 +45,43 @@ class MenuPertemuan4Page extends StatelessWidget {
   ///   page: NamaTugasPage(),
   /// ),
   /// ```
-  static const List<_Tugas> _tugas = [];
+  static const List<_Tugas> _tugas = [
+    _Tugas(
+      title: 'Expanded',
+      subtitle: 'Mengisi ruang kosong di dalam Row',
+      icon: Icons.open_in_full_rounded,
+      colors: [Color(0xFF4CAF50), Color(0xFF81C784)],
+      page: ExpandedPage(),
+    ),
+    _Tugas(
+      title: 'Spacer, ElevatedButton, SnackBar',
+      subtitle: 'Jarak fleksibel, tombol aksi, dan pesan notifikasi',
+      icon: Icons.smart_button_rounded,
+      colors: [Color(0xFF9C27B0), Color(0xFFBA68C8)],
+      page: SpacerElevatedButtonSnackBarPage(),
+    ),
+    _Tugas(
+      title: 'AlertDialog',
+      subtitle: 'Pop-up dialog informasi profil pengguna',
+      icon: Icons.chat_bubble_outline_rounded,
+      colors: [Color(0xFF3F51B5), Color(0xFF7986CB)],
+      page: AlertDialogPage(),
+    ),
+    _Tugas(
+      title: 'Navigasi Multi Halaman',
+      subtitle: 'Pindah halaman daftar ke detail anggota tim',
+      icon: Icons.swap_horiz_rounded,
+      colors: [Color(0xFFFF5722), Color(0xFFFF8A65)],
+      page: NavigasiMultiHalamanPage(),
+    ),
+    _Tugas(
+      title: 'Tugas Kelompok',
+      subtitle: 'Aplikasi katalog produk gadget (5 item)',
+      icon: Icons.shopping_bag_rounded,
+      colors: [Color(0xFF009688), Color(0xFF4DB6AC)],
+      page: TugasKelompokPage(),
+    ),
+  ];
 
   @override
   Widget build(BuildContext context) {

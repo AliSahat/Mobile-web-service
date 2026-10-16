@@ -27,7 +27,7 @@ class MyApp extends StatelessWidget {
     final baseText = GoogleFonts.poppinsTextTheme();
 
     return MaterialApp(
-      title: 'Menu Latihan Flutter',
+      title: 'Mobile & Web Service',
       locale: DevicePreview.locale(context),
       builder: DevicePreview.appBuilder,
       debugShowCheckedModeBanner: false,
@@ -93,7 +93,7 @@ class MenuUtamaPage extends StatelessWidget {
     _Pertemuan(
       number: 4,
       title: 'Pertemuan 4',
-      taskCount: 0,
+      taskCount: 5,
       icon: Icons.layers_rounded,
       colors: [Color(0xFF0984E3), Color(0xFF74B9FF)],
       page: MenuPertemuan4Page(),
@@ -111,7 +111,7 @@ class MenuUtamaPage extends StatelessWidget {
           child: Column(
             crossAxisAlignment: CrossAxisAlignment.stretch,
             children: [
-              // Bagian atas tetap (tidak ikut scroll).
+
               _Header(
                 totalPertemuan: _items.length,
                 totalTugas: totalTugas,
@@ -233,29 +233,30 @@ class _Header extends StatelessWidget {
     return Row(
       children: [
         Container(
-          width: 42,
-          height: 42,
-          clipBehavior: Clip.antiAlias,
+          width: 44,
+          height: 44,
           decoration: BoxDecoration(
+            shape: BoxShape.circle,
             color: Colors.white,
-            borderRadius: BorderRadius.circular(13),
             boxShadow: [
               BoxShadow(
-                color: Colors.black.withValues(alpha: 0.12),
+                color: Colors.black.withValues(alpha: 0.14),
                 blurRadius: 10,
-                offset: const Offset(0, 4),
+                offset: const Offset(0, 3),
               ),
             ],
           ),
-          child: Padding(
-            padding: const EdgeInsets.all(3),
-            child: Image.asset(
-              AppColors.logoPath,
-              fit: BoxFit.contain,
-              errorBuilder: (_, _, _) => const Icon(
-                Icons.flutter_dash,
-                color: AppColors.primary,
-                size: 24,
+          child: ClipOval(
+            child: Padding(
+              padding: const EdgeInsets.all(2),
+              child: Image.asset(
+                AppColors.logoPath,
+                fit: BoxFit.contain,
+                errorBuilder: (_, _, _) => const Icon(
+                  Icons.flutter_dash,
+                  color: AppColors.primary,
+                  size: 24,
+                ),
               ),
             ),
           ),
@@ -273,7 +274,7 @@ class _Header extends StatelessWidget {
                 ),
               ),
               Text(
-                'Latihan Flutter',
+                'Mobile & Web Service',
                 style: GoogleFonts.poppins(
                   color: Colors.white,
                   fontSize: 18,
