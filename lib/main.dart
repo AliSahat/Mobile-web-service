@@ -5,6 +5,7 @@ import 'package:google_fonts/google_fonts.dart';
 import 'pertemuan2/menu_pertemuan2.dart';
 import 'pertemuan3/menu_pertemuan3.dart';
 import 'pertemuan4/menu_pertemuan4.dart';
+import 'pertemuan5/menu_pertemuan5.dart';
 
 void main() {
   runApp(DevicePreview(enabled: true, builder: (context) => const MyApp()));
@@ -97,6 +98,14 @@ class MenuUtamaPage extends StatelessWidget {
       icon: Icons.layers_rounded,
       colors: [Color(0xFF0984E3), Color(0xFF74B9FF)],
       page: MenuPertemuan4Page(),
+    ),
+    _Pertemuan(
+      number: 5,
+      title: 'Pertemuan 5',
+      taskCount: 4,
+      icon: Icons.extension_rounded,
+      colors: [Color(0xFFE17055), Color(0xFFFAB1A0)],
+      page: MenuPertemuan5Page(),
     ),
   ];
 
