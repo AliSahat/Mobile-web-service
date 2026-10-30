@@ -6,6 +6,7 @@ import 'pertemuan2/menu_pertemuan2.dart';
 import 'pertemuan3/menu_pertemuan3.dart';
 import 'pertemuan4/menu_pertemuan4.dart';
 import 'pertemuan5/menu_pertemuan5.dart';
+import 'pertemuan6/menu_pertemuan6.dart';
 
 void main() {
   runApp(DevicePreview(enabled: true, builder: (context) => const MyApp()));
@@ -106,6 +107,14 @@ class MenuUtamaPage extends StatelessWidget {
       icon: Icons.extension_rounded,
       colors: [Color(0xFFE17055), Color(0xFFFAB1A0)],
       page: MenuPertemuan5Page(),
+    ),
+    _Pertemuan(
+      number: 6,
+      title: 'Pertemuan 6',
+      taskCount: 5,
+      icon: Icons.auto_awesome_mosaic_rounded,
+      colors: [Color(0xFFE84393), Color(0xFFFD79A8)],
+      page: MenuPertemuan6Page(),
     ),
   ];
 
